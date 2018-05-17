@@ -13,7 +13,7 @@ namespace PaperRaker.DataAccess
             For<Paper>().PrimaryKey(x => x.Id)
                 .Columns(x =>
                 {
-                    x.Column(y => y.Id).Ignore();
+                    //x.Column(y => y.Id).Ignore();
                     x.Column(y => y.Publisher).Ignore();
                     x.Column(y => y.Contributors).Ignore();
                 });

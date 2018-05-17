@@ -14,8 +14,10 @@ namespace PaperRaker.DataAccess.Repositories
         
         public Paper Get(int id)
         {
+            Paper p = null;
             using (IDatabase db = CoreFactory.DbFactory.GetDatabase())
             {
+                Connection.Open();
                 return db.SingleById<Paper>(id);
             }
         }
@@ -23,36 +25,48 @@ namespace PaperRaker.DataAccess.Repositories
         public IEnumerable<Paper> GetGroup(long size = 20, long page = 1)
         {
             size = size > 100 ? 100 : size;
-            using (IDatabase db = new Database(Connection))
+            //using (IDatabase db = new Database(Connection))
+            //{
+            //    Connection.Open();
+            using (IDatabase db = CoreFactory.DbFactory.GetDatabase())
             {
-                Connection.Open();
+                //CoreFactory.Connection.Open();
                 return db.Fetch<Paper>("SELECT * FROM Paper ORDER BY id");
             }
         }
 
         public void Add(Paper entity)
         {
-            using (IDatabase db = new Database(Connection))
+            //using (IDatabase db = new Database(Connection))
+            //{
+            //    Connection.Open();
+            using (IDatabase db = CoreFactory.DbFactory.GetDatabase())
             {
-                Connection.Open();
+                //CoreFactory.Connection.Open();
                 db.Insert(entity);
             }
         }
 
         public void Delete(int id)
         {
-            using (IDatabase db = new Database(Connection))
+            //using (IDatabase db = new Database(Connection))
+            //{
+            //    Connection.Open();
+            using (IDatabase db = CoreFactory.DbFactory.GetDatabase())
             {
-                Connection.Open();
+                //CoreFactory.Connection.Open();
                 db.Delete<Paper>(id);
             }
         }
 
         public void Update(Paper entity)
         {
-            using (IDatabase db = new Database(Connection))
+            //using (IDatabase db = new Database(Connection))
+            //{
+            //    Connection.Open();
+            using (IDatabase db = CoreFactory.DbFactory.GetDatabase())
             {
-                Connection.Open();
+                //CoreFactory.Connection.Open();
                 db.Update(entity);
             }
         }

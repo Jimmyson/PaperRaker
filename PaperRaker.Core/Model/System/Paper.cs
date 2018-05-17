@@ -23,6 +23,8 @@ namespace PaperRaker.Core.Model.System
         
         public Language? Language { get; set; }
         
+        public string Licence { get; set; }
+        
         public List<Contributor> Contributors { get; set; }
 
         //public HashSet<PaperAlias> Alias { get; set; }

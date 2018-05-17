@@ -1,5 +1,7 @@
 ﻿using System.Data.Common;
 using System.Data.SQLite;
+using System.IO;
+using System.Net;
 using NPoco;
 using NPoco.FluentMappings;
 
@@ -11,17 +13,18 @@ namespace PaperRaker.DataAccess
 
         public static void Setup()
         {
-            //SQLiteConnection.CreateFile("Data.sqlite");
+            if(!File.Exists("Data.sqlite"))
+                SQLiteConnection.CreateFile("Data.sqlite");
             var fluentConfig = FluentMappingConfiguration.Configure(new CoreMapping());
 
-            SQLiteConnection conn = new SQLiteConnection("Data Source=Data.sqlite");
-            Database db = new Database(conn, DatabaseType.SQLite);
+            DbConnection connection = new SQLiteConnection("Data Source=Data.sqlite");
+            Database db = new Database(connection, DatabaseType.SQLite);
             
             DbFactory = DatabaseFactory.Config(x =>
             {
                 x.UsingDatabase(() => db);
                 x.WithFluentConfig(fluentConfig);
-                conn.Open();
+                connection.Open();
             });
 
             DbFactory.Build(db);
