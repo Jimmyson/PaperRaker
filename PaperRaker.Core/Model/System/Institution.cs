@@ -16,6 +16,6 @@ namespace PaperRaker.Core.Model.System
         public DateTime Closed { get; set; }
         
         public InstitutionType Type { get; set; }
-        public HashSet<InstitutionAlias> Alias { get; set; }
+        //public HashSet<InstitutionAlias> Alias { get; set; }
     }
 }

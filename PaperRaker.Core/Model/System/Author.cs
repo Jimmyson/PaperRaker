@@ -15,6 +15,6 @@ namespace PaperRaker.Core.Model.System
         public string Suffix { get; set; }
         
         public GenderType Gender { get; set; }
-        public HashSet<AuthorAlias> Alias { get; set; }
+        //public HashSet<AuthorAlias> Alias { get; set; }
     }
 }
