@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using NPoco;
 using PaperRaker.Core.Model.System;
 using PaperRaker.DataAccess.Repositories;
 
@@ -21,14 +17,6 @@ namespace PaperRaker.WebAPI.Controllers
             //return new string[] {"value1", "value2"};
             return _paperRepo.GetGroup(size, offset);
         }
-                
-        // GET api/papers?offset=20&size=10
-        //[HttpGet]
-        //public IEnumerable<Paper> Get(uint size, uint? offset)
-        //{
-            //return new string[] {"value1", "value2"};
-        //    return _paperRepo.GetGroup(size, offset);
-        //}
 
         // GET api/papers/5
         [HttpGet("{id}")]

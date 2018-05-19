@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -9,7 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using PaperRaker.DataAccess;
 
 namespace PaperRaker.WebAPI
 {
@@ -17,7 +15,6 @@ namespace PaperRaker.WebAPI
     {
         public Startup(IConfiguration configuration)
         {
-            CoreFactory.Setup();
             Configuration = configuration;
         }
 

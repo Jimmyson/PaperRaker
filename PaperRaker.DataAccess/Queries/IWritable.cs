@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PaperRaker.DataAccess
+﻿namespace PaperRaker.DataAccess.Queries
 {
     public interface IWritable<in T>
     {

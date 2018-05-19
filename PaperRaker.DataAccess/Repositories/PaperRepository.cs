@@ -1,72 +1,52 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Data.SQLite;
+﻿using System.Collections.Generic;
 using NPoco;
 using PaperRaker.Core.Model.System;
 using PaperRaker.DataAccess.Queries;
+using PaperRaker.DataAccess.SchemaConnection;
 
 namespace PaperRaker.DataAccess.Repositories
 {
-    public class PaperRepository : CoreRepository, IReadable<Paper>, IWritable<Paper>
+    public class PaperRepository : IReadable<Paper>, IWritable<Paper>
     {
-        private SQLiteConnection Connection = new SQLiteConnection("Data Source=Data.sqlite");
+        private readonly IDatabase _schemaConn = SchemaConnectionFactory.CreateSchemaConnection("CORE");
         
         public Paper Get(int id)
         {
-            Paper p = null;
-            using (IDatabase db = CoreFactory.DbFactory.GetDatabase())
+            using (var db = _schemaConn)
             {
-                Connection.Open();
                 return db.SingleById<Paper>(id);
             }
         }
 
         public IEnumerable<Paper> GetGroup(long size = 20, long page = 1)
         {
-            size = size > 100 ? 100 : size;
-            //using (IDatabase db = new Database(Connection))
-            //{
-            //    Connection.Open();
-            using (IDatabase db = CoreFactory.DbFactory.GetDatabase())
+            //size = size > 100 ? 100 : size;
+            using (var db = _schemaConn)
             {
-                //CoreFactory.Connection.Open();
                 return db.Fetch<Paper>("SELECT * FROM Paper ORDER BY id");
             }
         }
 
         public void Add(Paper entity)
         {
-            //using (IDatabase db = new Database(Connection))
-            //{
-            //    Connection.Open();
-            using (IDatabase db = CoreFactory.DbFactory.GetDatabase())
+            using (var db = _schemaConn)
             {
-                //CoreFactory.Connection.Open();
                 db.Insert(entity);
             }
         }
 
         public void Delete(int id)
         {
-            //using (IDatabase db = new Database(Connection))
-            //{
-            //    Connection.Open();
-            using (IDatabase db = CoreFactory.DbFactory.GetDatabase())
+            using (var db = _schemaConn)
             {
-                //CoreFactory.Connection.Open();
                 db.Delete<Paper>(id);
             }
         }
 
         public void Update(Paper entity)
         {
-            //using (IDatabase db = new Database(Connection))
-            //{
-            //    Connection.Open();
-            using (IDatabase db = CoreFactory.DbFactory.GetDatabase())
+            using (var db = _schemaConn)
             {
-                //CoreFactory.Connection.Open();
                 db.Update(entity);
             }
         }
