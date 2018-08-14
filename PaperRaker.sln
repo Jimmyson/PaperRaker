@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperRaker.DataAccess", "Pa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperRaker.WebAPI", "PaperRaker.WebAPI\PaperRaker.WebAPI.csproj", "{3587B2A2-C45B-4BCC-A357-790920C58956}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperRaker.Validation", "PaperRaker.Validation\PaperRaker.Validation.csproj", "{8217FBFB-CD18-4DEE-A158-D7923BA806D1}"
+EndProject
 Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3C1A8258-5C8A-4286-864B-83928DDB1DFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -16,6 +18,8 @@ Global
 		{5C306336-B2B1-4B65-A84E-40E2436CF2D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3587B2A2-C45B-4BCC-A357-790920C58956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3587B2A2-C45B-4BCC-A357-790920C58956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8217FBFB-CD18-4DEE-A158-D7923BA806D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8217FBFB-CD18-4DEE-A158-D7923BA806D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
