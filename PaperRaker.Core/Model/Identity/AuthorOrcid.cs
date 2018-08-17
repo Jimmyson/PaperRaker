@@ -1,10 +1,11 @@
-﻿using PaperRaker.Core.Model.System;
-
-namespace PaperRaker.Core.Model.Identity
+﻿namespace PaperRaker.Core.Model.Identity
 {
+    /// <summary>
+    /// Details the ORCID records to an author
+    /// </summary>
     public class AuthorOrcid
     {
-        public Author Author { get; set; }
+        public int AuthorId { get; set; }
         public string Orcid { get; set; }
     }
 }

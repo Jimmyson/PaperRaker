@@ -1,10 +1,11 @@
-﻿using PaperRaker.Core.Model.System;
-
-namespace PaperRaker.Core.Model.Identity
+﻿namespace PaperRaker.Core.Model.Identity
 {
+    /// <summary>
+    /// Details the GRID.AC records to an institution
+    /// </summary>
     public class InstitutionGrid
     {
-        public Institution Institution { get; set; }
+        public int InstitutionId { get; set; }
         public string Grid { get; set; }
     }
 }

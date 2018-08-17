@@ -2,6 +2,7 @@
 {
     public enum ContributorType
     {
+        Unknown,
         Author,
         Editor,
         Chair,

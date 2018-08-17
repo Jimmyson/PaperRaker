@@ -1,10 +1,11 @@
-﻿using PaperRaker.Core.Model.System;
-
-namespace PaperRaker.Core.Model.Identity
+﻿namespace PaperRaker.Core.Model.Identity
 {
+    /// <summary>
+    /// Details the ISNI records to an author
+    /// </summary>
     public class AuthorIsni
     {
-        public Author Author { get; set; }
+        public int AuthorId { get; set; }
         public string Isni { get; set; }
     }
 }

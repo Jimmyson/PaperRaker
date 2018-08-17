@@ -39,7 +39,7 @@ namespace PaperRaker.WebAPI.Controllers
         //public void Put(int id, [FromBody] string value)
         public void Put(int id, [FromBody] Institution value)
         {
-            value.Id = id;
+            value.InstitutionId = id;
             if (ModelState.IsValid)
                 _institutionRepo.Update(value);
         }

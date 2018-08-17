@@ -1,10 +1,12 @@
 ﻿namespace PaperRaker.Core.Model.System
 {
+    /// <summary>
+    /// Identifies a Link between a Paper Contributor and their partnering Institution
+    /// </summary>
     public class Affiliation
     {
-        public Contributor Contributor { get; set; }
-        public Institution Institution { get; set; }
-        public Institution Faculty { get; set; }
+        public int InstitutionId { get; set; }
+        public int Faculty { get; set; }
         
         public bool Primary { get; set; }
     }

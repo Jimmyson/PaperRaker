@@ -1,10 +1,11 @@
-﻿using PaperRaker.Core.Model.System;
-
-namespace PaperRaker.Core.Model.Identity
+﻿namespace PaperRaker.Core.Model.Identity
 {
+    /// <summary>
+    /// Details the DOI records to a paper
+    /// </summary>
     public class PaperDoi
     {
-        public Paper Paper { get; set; }
+        public int PaperId { get; set; }
         public string Doi { get; set; }
     }
 }

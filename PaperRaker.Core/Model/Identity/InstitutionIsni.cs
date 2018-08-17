@@ -1,10 +1,11 @@
-﻿using PaperRaker.Core.Model.System;
-
-namespace PaperRaker.Core.Model.Identity
+﻿namespace PaperRaker.Core.Model.Identity
 {
+    /// <summary>
+    /// Details the ISSN records to an institution
+    /// </summary>
     public class InstitutionIsni
     {
-        public Institution Institution { get; set; }
+        public int InstitutionId { get; set; }
         public string Isni { get; set; }
     }
 }

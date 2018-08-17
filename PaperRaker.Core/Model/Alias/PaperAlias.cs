@@ -1,15 +1,17 @@
-﻿using PaperRaker.Core.Model.Enum;
-using PaperRaker.Core.Model.System;
-
-namespace PaperRaker.Core.Model.Alias
+﻿namespace PaperRaker.Core.Model.Alias
 {
+    /// <inheritdoc />
+    /// <summary>
+    /// Defines a Aliased name for a Paper
+    /// </summary>
     public class PaperAlias : BaseEntity
     {
-        public Paper Paper { get; set; }
+        public int PaperAliasId { get; set; }
+        public int PaperId { get; set; }
         
         public string Title { get; set; }
         public string Subtitle { get; set; }
         
-        public Language Locale { get; set; }
+        public string Locale { get; set; }
     }
 }

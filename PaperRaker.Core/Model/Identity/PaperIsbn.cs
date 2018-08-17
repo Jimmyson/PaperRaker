@@ -1,10 +1,11 @@
-﻿using PaperRaker.Core.Model.System;
-
-namespace PaperRaker.Core.Model.Identity
+﻿namespace PaperRaker.Core.Model.Identity
 {
+    /// <summary>
+    /// Details the ISBN records to a paper
+    /// </summary>
     public class PaperIsbn
     {
-        public Paper Paper { get; set; }
+        public int PaperId { get; set; }
         public string Isbn { get; set; }
     }
 }

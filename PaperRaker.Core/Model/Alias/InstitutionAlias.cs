@@ -1,14 +1,16 @@
-﻿using PaperRaker.Core.Model.Enum;
-using PaperRaker.Core.Model.System;
-
-namespace PaperRaker.Core.Model.Alias
+﻿namespace PaperRaker.Core.Model.Alias
 {
+    /// <inheritdoc />
+    /// <summary>
+    /// Defines a Aliased name for an Institution
+    /// </summary>
     public class InstitutionAlias : BaseEntity
     {
-        public Institution Institution { get; set; }
+        public int InstitutionAliasId { get; set; }
+        public int InstitutionId { get; set; }
         
         public string Name { get; set; }
         
-        public Language Locale { get; set; }
+        public string Locale { get; set; }
     }
 }
