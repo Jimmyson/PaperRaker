@@ -7,7 +7,7 @@ namespace PaperRaker.Core.Identity
     /// </summary>
     public class AuthorIsni
     {
-        public int AuthorId { get; set; }
+        public uint AuthorId { get; set; }
         public string Isni { get; set; }
 
 		public Author Author { get; set; }

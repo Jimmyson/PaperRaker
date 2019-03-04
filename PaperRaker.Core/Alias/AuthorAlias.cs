@@ -1,4 +1,6 @@
-﻿namespace PaperRaker.Core.Alias
+﻿using PaperRaker.Core.System;
+
+namespace PaperRaker.Core.Alias
 {
     /// <inheritdoc />
     /// <summary>
@@ -6,13 +8,15 @@
     /// </summary>
     public class AuthorAlias : BaseEntity
     {
-        public int AuthorAliasId { get; set; }
-        public int AuthorId { get; set; }
+        public uint AuthorAliasId { get; set; }
+        public uint AuthorId { get; set; }
         
         public string Given { get; set; }
         public string Middle { get; set; }
         public string Family { get; set; }
         
         public string Locale { get; set; }
+
+		public Author Author { get; set; }
     }
 }

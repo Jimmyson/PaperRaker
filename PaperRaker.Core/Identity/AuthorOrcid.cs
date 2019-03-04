@@ -7,7 +7,7 @@ namespace PaperRaker.Core.Identity
     /// </summary>
     public class AuthorOrcid
     {
-        public int AuthorId { get; set; }
+        public uint AuthorId { get; set; }
         public string Orcid { get; set; }
 
 		public Author Author { get; set; }

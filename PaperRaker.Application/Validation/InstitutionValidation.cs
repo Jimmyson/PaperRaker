@@ -7,7 +7,7 @@ namespace PaperRaker.Application.Validation
     {
         public InstitutionValidation()
         {
-            RuleFor(i => i.InstitutionId).NotNull().NotEmpty().NotEqual(0);
+            RuleFor(i => i.InstitutionId).NotNull().NotEmpty().NotEqual(uint.MinValue);
 
             RuleFor(i => i.Name).NotNull().NotEmpty();
             RuleFor(i => i.City).NotNull().NotEmpty();

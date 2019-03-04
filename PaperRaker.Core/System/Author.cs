@@ -16,9 +16,10 @@ namespace PaperRaker.Core.System
 			Orcids = new List<AuthorOrcid>();
 			Isnis = new List<AuthorIsni>();
 			Alias = new List<AuthorAlias>();
+			Contributors = new List<Contributor>();
 		}
 
-        public int AuthorId { get; set; }
+        public uint AuthorId { get; set; }
         public string Prefix { get; set; }
         
         public string Given { get; set; }
@@ -32,5 +33,7 @@ namespace PaperRaker.Core.System
         public List<AuthorAlias> Alias { get; set; }
         public List<AuthorIsni> Isnis { get; set; }
         public List<AuthorOrcid> Orcids { get; set; }
+
+		public List<Contributor> Contributors { get; set; }
     }
 }

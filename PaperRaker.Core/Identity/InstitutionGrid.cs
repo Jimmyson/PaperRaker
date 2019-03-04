@@ -7,7 +7,7 @@ namespace PaperRaker.Core.Identity
     /// </summary>
     public class InstitutionGrid
     {
-        public int InstitutionId { get; set; }
+        public uint InstitutionId { get; set; }
         public string Grid { get; set; }
 
 		public Institution Institution { get; set; }

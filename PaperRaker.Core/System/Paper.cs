@@ -20,7 +20,7 @@ namespace PaperRaker.Core.System
 			Alias = new List<PaperAlias>();
 		}
 		
-        public int PaperId { get; set; }
+        public uint PaperId { get; set; }
         
         public string Title { get; set; }
         public string Subtitle { get; set; }
@@ -32,7 +32,7 @@ namespace PaperRaker.Core.System
         public DateTime? ReleaseDate { get; set; }
         public PaperType? ReleaseType { get; set; }
         
-        public int PublisherId { get; set; }
+        public uint PublisherId { get; set; }
         public DateTime? PublishDate { get; set; }
         public PublishType? PublishType { get; set; }
         

@@ -6,7 +6,7 @@
     /// </summary>
     public class Publisher : BaseEntity
     {
-        public int PublisherId { get; set; }
+        public uint PublisherId { get; set; }
         
         public string Name { get; set; }
         

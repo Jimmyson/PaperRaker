@@ -19,7 +19,7 @@ namespace PaperRaker.Core.System
 			Alias = new List<InstitutionAlias>();
 		}
 
-        public int InstitutionId { get; set; }
+        public uint InstitutionId { get; set; }
         public string Name { get; set; }
         
         public string City { get; set; }

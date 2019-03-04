@@ -3,11 +3,13 @@
     /// <summary>
     /// Identifies a Link between a Paper Contributor and their partnering Institution
     /// </summary>
-    public class Affiliation
+    public class Affiliation : BaseEntity
     {
-        public int InstitutionId { get; set; }
-        public int Faculty { get; set; }
+        public uint InstitutionId { get; set; }
+        public uint Faculty { get; set; }
         
         public bool Primary { get; set; }
+
+		public Institution Institution { get; set; }
     }
 }

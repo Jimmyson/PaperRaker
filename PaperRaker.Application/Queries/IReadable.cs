@@ -4,7 +4,7 @@ namespace PaperRaker.Application.Queries
 {
     public interface IReadable<out T>
     {
-        T Get(int id);
-        IEnumerable<T> GetGroup(long size = 20, long page = 1);
+        T Get(uint id);
+        IEnumerable<T> GetGroup(uint size = 20, uint page = 1);
     }
 }

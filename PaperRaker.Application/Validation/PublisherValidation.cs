@@ -7,7 +7,7 @@ namespace PaperRaker.Application.Validation
     {
         public PublisherValidation()
         {
-            RuleFor(i => i.PublisherId).NotNull().NotEmpty().NotEqual(0);
+            RuleFor(i => i.PublisherId).NotNull().NotEmpty().NotEqual(uint.MinValue);
 
             RuleFor(i => i.Name).NotNull().NotEmpty();
             RuleFor(i => i.City).NotNull().NotEmpty();

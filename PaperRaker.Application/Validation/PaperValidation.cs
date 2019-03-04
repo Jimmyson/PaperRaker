@@ -7,7 +7,7 @@ namespace PaperRaker.Application.Validation
     {
         public PaperValidation()
         {
-            RuleFor(p => p.PaperId).NotNull().NotEmpty().NotEqual(0);
+            RuleFor(p => p.PaperId).NotNull().NotEmpty().NotEqual(uint.MinValue);
             
             RuleFor(p => p.Title).NotNull().NotEmpty();
             RuleFor(p => p.PeerReviewed).NotNull().NotEmpty();
