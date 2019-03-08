@@ -5,11 +5,14 @@
     /// </summary>
     public class Affiliation : BaseEntity
     {
+        public uint PaperId { get; set; }
+        public uint AuthorId { get; set; }
         public uint InstitutionId { get; set; }
-        public uint Faculty { get; set; }
+        // public uint Faculty { get; set; } // Needs to pair to an Institution
         
         public bool Primary { get; set; }
 
-		public Institution Institution { get; set; }
+		public virtual Contributor Contributor { get; set; }
+		public virtual Institution Institution { get; set; }
     }
 }

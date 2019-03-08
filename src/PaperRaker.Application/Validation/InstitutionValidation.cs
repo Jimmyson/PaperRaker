@@ -7,11 +7,22 @@ namespace PaperRaker.Application.Validation
     {
         public InstitutionValidation()
         {
-            RuleFor(i => i.InstitutionId).NotNull().NotEmpty().NotEqual(uint.MinValue);
+            RuleFor(i => i.InstitutionId)
+				.NotNull()
+				.NotEmpty()
+				.NotEqual(uint.MinValue);
 
-            RuleFor(i => i.Name).NotNull().NotEmpty();
-            RuleFor(i => i.City).NotNull().NotEmpty();
-            RuleFor(i => i.Country).NotNull().NotEmpty();
+            RuleFor(i => i.Name)
+				.NotNull()
+				.NotEmpty();
+
+			// TODO: Replace with Area Entity links
+            RuleFor(i => i.City)
+				.NotNull()
+				.NotEmpty();
+            RuleFor(i => i.Country)
+				.NotNull()
+				.NotEmpty();
         }
     }
 }

@@ -12,9 +12,9 @@ namespace PaperRaker.Core.System
         public uint AuthorId { get; set; }
         public ContributorType Type { get; set; }
 		
-        public List<Affiliation> Affiliations { get; set; }
+        public virtual List<Affiliation> Affiliations { get; set; }
 
-		public Paper Paper { get; set; }
-		public Author Author { get; set; }
+		public virtual Paper Paper { get; set; }
+		public virtual Author Author { get; set; }
     }
 }

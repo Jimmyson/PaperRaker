@@ -32,17 +32,22 @@ namespace PaperRaker.Core.System
         public DateTime? ReleaseDate { get; set; }
         public PaperType? ReleaseType { get; set; }
         
-        public uint PublisherId { get; set; }
+        public uint? PublisherId { get; set; }
         public DateTime? PublishDate { get; set; }
         public PublishType? PublishType { get; set; }
+
+		public uint? ConferenceId { get; set; }
         
         public string Language { get; set; }
         public string Licence { get; set; }
         
-        public List<Contributor> Contributors { get; set; }
-        public List<PaperDoi> Dois { get; set; }
-		public List<PaperArticle> Articles { get; set; }
+        public virtual List<Contributor> Contributors { get; set; }
+        public virtual List<PaperDoi> Dois { get; set; }
+		public virtual List<PaperArticle> Articles { get; set; }
 
-        public List<PaperAlias> Alias { get; set; }
+        public virtual List<PaperAlias> Alias { get; set; }
+
+		public virtual Publisher Publisher { get; set; }
+		public virtual Conference Conference { get; set; }
     }
 }

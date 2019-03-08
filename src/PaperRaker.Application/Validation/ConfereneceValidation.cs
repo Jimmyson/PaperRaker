@@ -3,11 +3,11 @@ using PaperRaker.Core.System;
 
 namespace PaperRaker.Application.Validation
 {
-    public class PublisherValidation : AbstractValidator<Publisher>
+    public class ConfereneceValidation : AbstractValidator<Conference>
     {
-        public PublisherValidation()
+        public ConfereneceValidation()
         {
-            RuleFor(i => i.PublisherId)
+            RuleFor(i => i.ConferenceId)
 				.NotNull()
 				.NotEmpty()
 				.NotEqual(uint.MinValue);
@@ -15,7 +15,7 @@ namespace PaperRaker.Application.Validation
             RuleFor(i => i.Name)
 				.NotNull()
 				.NotEmpty();
-			
+
 			// TODO: Replace with Area Entity links
             RuleFor(i => i.City)
 				.NotNull()

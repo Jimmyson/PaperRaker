@@ -1,4 +1,6 @@
-﻿namespace PaperRaker.Core.System
+﻿using System.Collections.Generic;
+
+namespace PaperRaker.Core.System
 {
     /// <inheritdoc />
     /// <summary>
@@ -9,8 +11,11 @@
         public uint PublisherId { get; set; }
         
         public string Name { get; set; }
-        
+		
+        // TODO: Replace with Area Entity links
         public string City { get; set; }
         public string Country { get; set; }
+
+		public virtual List<Paper> Papers { get; set; }
     }
 }

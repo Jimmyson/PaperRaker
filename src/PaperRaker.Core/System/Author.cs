@@ -30,10 +30,10 @@ namespace PaperRaker.Core.System
         
         public GenderType Gender { get; set; }
         
-        public List<AuthorAlias> Alias { get; set; }
-        public List<AuthorIsni> Isnis { get; set; }
-        public List<AuthorOrcid> Orcids { get; set; }
+        public virtual List<AuthorAlias> Alias { get; set; }
+        public virtual List<AuthorIsni> Isnis { get; set; }
+        public virtual List<AuthorOrcid> Orcids { get; set; }
 
-		public List<Contributor> Contributors { get; set; }
+		public virtual List<Contributor> Contributors { get; set; }
     }
 }

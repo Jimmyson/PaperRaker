@@ -6,8 +6,6 @@ namespace PaperRaker.Core.Identity
 {
 	public class PaperArticle
 	{
-		private string _code { get; set; }
-
 		public PaperArticle(string code)
 		{
 			Code = code;
@@ -16,6 +14,7 @@ namespace PaperRaker.Core.Identity
 		public uint PaperArticleId { get; set; }
 		public uint PaperId { get; set; }
 		public ArticleNumberType Type { get; protected set; }
+		private string _code { get; set; }
 		public string Code {
 			get => _code;
 			set {

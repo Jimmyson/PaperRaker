@@ -21,17 +21,20 @@ namespace PaperRaker.Core.System
 
         public uint InstitutionId { get; set; }
         public string Name { get; set; }
-        
+		
+        // TODO: Replace with Area Entity links
         public string City { get; set; }
         public string Country { get; set; }
         
-        public DateTime Opened { get; set; }
-        public DateTime Closed { get; set; }
+        public DateTime? Opened { get; set; }
+        public DateTime? Closed { get; set; }
         
         public InstitutionType Type { get; set; }
+
+		public virtual List<Affiliation> Affiliations { get; set; }
         
-        public List<InstitutionAlias> Alias { get; set; }
-        public List<InstitutionIsni> Isnis { get; set; }
-        public List<InstitutionGrid> Grids { get; set; }
+        public virtual List<InstitutionAlias> Alias { get; set; }
+        public virtual List<InstitutionIsni> Isnis { get; set; }
+        public virtual List<InstitutionGrid> Grids { get; set; }
     }
 }
