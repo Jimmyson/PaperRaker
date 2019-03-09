@@ -1,4 +1,4 @@
-﻿namespace PaperRaker.Aplication.Queries
+﻿namespace PaperRaker.Application.Queries
 {
     public interface IWritable<in T>
     {

@@ -21,7 +21,7 @@ namespace PaperRaker.DataAccess.Configurations
 
 			// Relationships
 			builder.HasOne(x => x.Institution)
-					.WithMany(a => a.Alias);
+					.WithMany(i => i.Alias);
 
 			//throw new System.NotImplementedException();
 		}

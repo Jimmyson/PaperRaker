@@ -24,7 +24,7 @@ namespace PaperRaker.DataAccess.Configurations
 
 			// Relationships
 			builder.HasOne(x => x.Paper)
-					.WithMany(a => a.Alias);
+					.WithMany(p => p.Alias);
 					
 			//throw new System.NotImplementedException();
 		}

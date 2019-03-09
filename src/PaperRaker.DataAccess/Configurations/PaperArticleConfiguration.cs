@@ -29,7 +29,7 @@ namespace PaperRaker.DataAccess.Configurations
 
 			// Relationships
 			builder.HasOne(x => x.Paper)
-					.WithMany(a => a.Articles);
+					.WithMany(p => p.Articles);
 					
 			//throw new System.NotImplementedException();
 		}
